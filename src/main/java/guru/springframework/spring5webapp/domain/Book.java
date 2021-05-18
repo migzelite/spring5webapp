@@ -21,7 +21,6 @@ public class Book {
     private Set<Author> authors = new HashSet<>();
 
     @ManyToOne
-    @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
     public Book(String title, String isbn) {
@@ -34,10 +33,8 @@ public class Book {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
         Book book = (Book) o;
 
