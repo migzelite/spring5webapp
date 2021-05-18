@@ -11,12 +11,12 @@ import java.util.Set;
 @Entity
 public class Author {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;
 
-    @ManyToMany(mappedBy = "authors", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
 
     public Author(String firstName, String lastName) {

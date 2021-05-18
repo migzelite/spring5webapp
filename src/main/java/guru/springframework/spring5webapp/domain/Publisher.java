@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 public class Publisher {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String addressLine1;
