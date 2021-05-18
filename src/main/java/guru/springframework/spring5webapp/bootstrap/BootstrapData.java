@@ -28,6 +28,9 @@ public class BootstrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+//        authorRepository.deleteAll();
+//        bookRepository.deleteAll();
+//        publisherRepository.deleteAll();
         Publisher pub = new Publisher("Happy 420 Times", "111 main st", "Boca Raton", "FL", "33487");
 
         publisherRepository.save(pub);
